@@ -28,6 +28,7 @@ This is Phase 1 of my engineering journey. Each module tackles a specific Python
 - **Phase 5:** CI/CD Pipelines & MLOps Infrastructure
 
 ## 🛠️ Current Tech Stack
+- Frontend & SEO (Previous Experience)
 - Python 3.x
 - Git & Version Control 
 
