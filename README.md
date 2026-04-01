@@ -2,7 +2,11 @@
 
 This repository contains my foundational Python projects, explicitly tailored toward building the core backend skills required for **AI Platform Engineering**. 
 
-To build scalable AI systems, deploy Large Language Models (LLMs), and manage production MLOps pipelines, generic Python scripts are not enough. You need a flawless understanding of memory management, strict type safety, concurrency, and API integration. I am mastering these concepts by building infrastructure-adjacent CLI tools, high-throughput data pipelines, programmatic SEO tools, and system architecture mockups from scratch.
+When I started my journey into AI Platform Engineering, I quickly realized the role goes way beyond just writing basic Python scripts. It’s really about building the heavy-duty pipelines that allow LLMs to run securely, affordably, and reliably in the real world.
+
+As someone breaking into this space, I know that to eventually handle MLOps and deploy production models, I need a rock-solid grip on the backend fundamentals—things like memory management, strict type safety, concurrency, and web-scale data ingestion.
+
+So, rather than getting stuck in 'tutorial hell,' I’m documenting my learning process here. I'm teaching myself these core concepts by actually building things from scratch, focusing on infrastructure-adjacent CLI tools, high-throughput RAG ingestion pipelines, and system architecture mockups.
 
 ## 🏗️ Project Architecture (Phase 1: Core Python)
 
