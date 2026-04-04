@@ -8,7 +8,7 @@ So, rather than getting stuck in "tutorial hell," I’m documenting my learning 
 
 ## 🏗️ Project Architecture (Phase 1: Core Python)
 
-This is Phase 1 of my engineering journey. Each module tackles a specific Python fundamental required for both traditional backend systems and modern AI operations, proven through exactly 5 high-impact projects. 
+This is Phase 1 of my ai engineering journey. Each module tackles a specific Python fundamental required for both traditional backend systems and modern AI operations, proven through exactly 5 high-impact projects. 
 
 *(Note: 📈 projects leverage my previous SEO background for web-scale RAG data ingestion, while 🔥 projects explore cutting-edge AI infrastructure concepts.)*
 
