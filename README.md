@@ -1,12 +1,12 @@
-# Python Foundations for AI & Backend Projects ⚙️🤖
+# Python Foundations for AI Integration & LLM Development ⚙️🤖
 
-I’m moving from frontend and web work into Python, backend, and eventually AI/LLM projects. This repo is my way of learning out loud. Instead of just calling an LLM API a few times and saying “I know AI,” I want to understand how these models actually fit into real products—how they connect to APIs, databases, web data, and user flows.[web:26][web:31]
+I’m moving from frontend and web/SEO work into Python, backend, and eventually **AI Integration & LLM Development**, and this repo is my way of learning out loud. Instead of just calling an LLM API a few times and saying “I know AI,” I want to understand how these models actually fit into real products—how they connect to APIs, databases, web data, and user flows.[web:26][web:31]
 
-To get there, I’m using Python to build small, focused projects that look like real, everyday engineering tasks: estimating costs, cleaning and chunking text, validating inputs, handling failures, and wiring components into simple pipelines. I’m also using a bit of my past SEO experience to build medium-level web data projects that could later be useful for RAG-style and search-style systems.
+To get there, I’m using Python to build small, focused projects that look like real, everyday engineering tasks: estimating costs, cleaning and chunking text, validating inputs, handling failures, and wiring components into simple pipelines. I’m also using a bit of my past web/SEO experience to build medium-level web data projects that could later be useful for RAG-style and search-style systems.
 
-Right now I don’t know everything about AI systems or backend infrastructure. I’m learning it step by step. The idea is simple: pick one core idea at a time (like working with JSON, handling errors, or processing text), and build a tiny project around it that I can actually run, break, and improve.
+Right now I don’t know everything about AI systems or infrastructure. I’m learning it step by step. The idea is simple: pick one core idea at a time (like working with JSON, handling errors, or processing text), and build a tiny project around it that I can actually run, break, and improve.
 
-Over time, I want these skills to stack into something bigger: REST APIs, data pipelines, LLM integrations, RAG, and agent-style workflows. This repository is **Phase 1** of that journey—using core Python to become confident enough to build real things later.
+Over time, I want these skills to stack into something bigger: REST APIs, data pipelines, LLM integrations, RAG, and agent-style workflows. This repository is **Phase 1** of that journey—using core Python to get ready for more serious backend and LLM work in the future.
 
 ---
 
