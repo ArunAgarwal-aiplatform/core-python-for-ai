@@ -10,78 +10,15 @@ Over time, I want these skills to stack into something bigger: REST APIs, data p
 
 ---
 
-## 🏗️ Project Architecture (Phase 1)
+## 🏗️ Project Architecture (Phase 1 – Core Python → LLM & Backend)
 
-I’ve organized the projects by **level**, from basic scripts up to small orchestration-style experiments.  
-Each level has 5 projects: a mix of general backend-style practice plus one project that uses web/page data (where my past experience helps).
-
-The names are intentionally simple and descriptive so anyone scanning the repo can quickly understand what each thing does.
-
----
-
-### Level 1 – Core Scripting & I/O  
-_Focus: functions, math, basic logic, clean console output_
-
-| Project | Description |
-|--------|-------------|
-| [Cloud API Cost Estimator](./level-1/cloud-cost-estimator) | Estimates the total cost of an LLM/API run using token prices and usage, and prints a clear cost breakdown. |
-| [Environment Config Validator](./level-1/env-config-validator) | Loads a few mock config values (keys, timeouts, flags) and checks for missing, empty, or wrong-type settings. |
-| [LLM Token Budget Calculator](./level-1/token-calculator) | Starts from a fixed budget and calculates how many tokens or requests fit within that cost limit. |
-| [Text Cleaning Utility](./level-1/text-cleaner) | Normalizes raw text by trimming whitespace, removing junk characters, and preparing it for later embedding or storage. |
-| 📈 [RAG Crawler Budget Tracker](./level-1/crawl-budget-tracker) | Uses rough page-size and URL counts to estimate how large a basic document crawl will be in MB/GB for a future RAG system. |
-
----
-
-### Level 2 – Data Parsing & Safety Checks  
-_Focus: dictionaries, JSON, routing, simple guard logic_
-
-| Project | Description |
-|--------|-------------|
-| [API Rate Limit Handler](./level-2/rate-limit-handler) | Simulates hitting a rate limit and shows how a script can pause, back off, or slow itself down. |
-| [API Response Extractor](./level-2/response-extractor) | Works with a mock JSON response and pulls out only the useful fields (text, ids, usage) into a clean structure. |
-| [Model Fallback Router](./level-2/fallback-router) | Given a simple condition (like error or complexity), chooses between a “fast” or “smart” model as the next step. |
-| 📈 [JSON-LD Metadata Extractor](./level-2/schema-injector) | Reads small JSON-LD or page-metadata snippets and extracts titles, URLs, and entity information for later indexing. |
-| 🔥 [Semantic Prompt Injection Firewall](./level-2/injection-firewall) | Scans prompts for risky patterns (like “ignore previous instructions”) and flags or blocks them before they’re sent on. |
-
----
-
-### Level 3 – Batch Work & Resilience  
-_Focus: loops, retry logic, bulk processing_
-
-| Project | Description |
-|--------|-------------|
-| [Dataset Batch Generator](./level-3/dataset-batcher) | Takes a long list of items and splits them into batches ready for bulk processing or batched API calls. |
-| [Exponential Backoff Retrier](./level-3/backoff-retrier) | Simulates failing operations and retries them with growing delays to avoid hammering a flaky service. |
-| [Pydantic API Request Validator](./level-3/request-validator) | Uses Pydantic models to validate that fake requests have the right fields and types before they “hit” an API. |
-| 📈 [High-Throughput Sitemap Ingestor](./level-3/sitemap-extractor) | Walks through a simple sitemap-like structure and collects URLs into batches for later crawling or indexing. |
-| 🔥 [Context-Aware RAG Chunker](./level-3/rag-chunker) | Splits long documents into overlapping text chunks so they’re easier to search and feed into retrieval systems. |
-
----
-
-### Level 4 – State, Quality & Caching  
-_Focus: light state management, scoring, reuse and optimization_
-
-| Project | Description |
-|--------|-------------|
-| [DB Connection Pooler](./level-4/connection-pooler) | Pretends to manage a small pool of reusable “connections” instead of creating a new one for every request. |
-| [Sliding-Window Memory Manager](./level-4/sliding-window-memory) | Keeps only the most recent messages in a fake chat history to mimic a limited context window. |
-| [Streaming JSON Chunk Assembler](./level-4/streaming-assembler) | Simulates receiving partial JSON/text chunks and rebuilds them into one complete response. |
-| 📈 [RAG Source Quality Scorer](./level-4/source-quality-scorer) | Assigns simple scores to documents based on length, noise, or structure to decide which ones are worth indexing. |
-| 🔥 [LLM Caching Decorator Library](./level-4/caching-decorators) | Uses decorators to cache repeated “prompt → response” calls so identical queries can be served from memory instead of re-calling a model. |
-
----
-
-### Level 5 – Orchestration & Small “Agent-Like” Flows  
-_Focus: basic OOP, simple orchestration, multi-step and agent-style patterns_
-
-| Project | Description |
-|--------|-------------|
-| [Async Request Pipeliner Mockup](./level-5/request-pipeliner) | Simulates sending multiple fake requests and handling them in a simple, pipelined or concurrent style. |
-| [Agentic Tool Call Parser](./level-5/tool-call-parser) | Accepts a structured “tool call” output (like a JSON instruction) and routes it to the right local function. |
-| 📈 [Stateful Web-Research Agent](./level-5/stateful-scraper) | Tracks which pages have been “visited” in a small browsing session and records simple notes per page. |
-| 🔥 [In-Memory Baby Vector DB](./level-5/baby-vector-db) | Stores text alongside small mock “vectors” and performs a toy similarity search over them. |
-| 🔥 [Multi-Agent Delegation Framework](./level-5/multi-agent-framework) | Models a tiny system where two or more “agents” pass tasks and messages between each other to complete a goal. |
-
+| # | Progression Level | Applied Projects | Why This Matters for LLM & Backend Work |
+|---|-------------------|------------------|------------------------------------------|
+| **01** | **Level 1: Core Scripting & I/O**<br>*(Functions, math, basic logic)* | <ul><li>[Cloud API Cost Estimator](./level-1/cloud-cost-estimator)</li><li>[Environment Config Validator](./level-1/env-config-validator)</li><li>[LLM Token Budget Calculator](./level-1/token-calculator)</li><li>[Text Cleaning Utility](./level-1/text-cleaner)</li><li>📈 **[RAG Crawler Budget Tracker](./level-1/crawl-budget-tracker)**</li></ul> | Learning to work with numbers, types, and simple functions while thinking in terms of real constraints: API cost, safe config loading, token limits, and how much data a basic crawl or ingestion job will actually produce. |
+| **02** | **Level 2: Data Parsing & Safety Checks**<br>*(Dicts, JSON, routing, guard logic)* | <ul><li>[API Rate Limit Handler](./level-2/rate-limit-handler)</li><li>[API Response Extractor](./level-2/response-extractor)</li><li>[Webhook Payload Builder](./level-2/webhook-builder)</li><li>[Model Fallback Router](./level-2/fallback-router)</li><li>📈 **[JSON-LD Metadata Extractor](./level-2/schema-injector)**</li><li>🔥 **[Semantic Prompt Injection Firewall](./level-2/injection-firewall)**</li></ul> | Practicing how real services talk in JSON, how to pull out only what you need, how to route between different “modes” or models, and how to add simple safety checks so bad inputs or prompts don’t go straight into a model. |
+| **03** | **Level 3: Batch Operations & Resilience**<br>*(Loops, retry logic, bulk processing)* | <ul><li>[Dataset Batch Generator](./level-3/dataset-batcher)</li><li>[Exponential Backoff Retrier](./level-3/backoff-retrier)</li><li>[Pydantic API Request Validator](./level-3/request-validator)</li><li>📈 **[High-Throughput Sitemap Ingestor](./level-3/sitemap-extractor)</li><li>📈 **[Spider-Trap Escape Guardrail](./level-3/spider-trap-guardrail)</li><li>🔥 **[Context-Aware RAG Chunker](./level-3/rag-chunker)</li></ul> | Moving from single requests to many: batching items, retrying failures without attacking a service, validating request shapes, collecting lots of URLs from simple sitemap-style data, avoiding infinite crawl loops, and chopping documents into retrieval-friendly chunks. |
+| **04** | **Level 4: State Management & Optimization**<br>*(Light state, caching, aggregation)* | <ul><li>[Map-Reduce Log Aggregator](./level-4/map-reduce-aggregator)</li><li>[DB Connection Pooler](./level-4/connection-pooler)</li><li>[Sliding-Window Memory Manager](./level-4/sliding-window-memory)</li><li>[Streaming JSON Chunk Assembler](./level-4/streaming-assembler)</li><li>📈 **[RAG Source Quality Scorer](./level-4/source-quality-scorer)</li><li>🔥 **[LLM Caching Decorator Library](./level-4/caching-decorators)</li></ul> | Thinking more like someone running a system: summarizing logs, reusing connections, trimming histories to fit in context windows, rebuilding streaming responses, ranking which documents are worth indexing, and caching repeat queries so you don’t pay or wait twice. |
+| **05** | **Level 5: Architecture & Orchestration**<br>*(OOP, simple async ideas, agent-like flows)* | <ul><li>[Async Request Pipeliner Mockup](./level-5/request-pipeliner)</li><li>[Agentic Tool Call Parser](./level-5/tool-call-parser)</li><li>[Pipeline Task Runner](./level-5/task-runner)</li><li>📈 **[Stateful Web-Research Agent](./level-5/stateful-scraper)</li><li>🔥 **[In-Memory Baby Vector DB](./level-5/baby-vector-db)</li><li>🔥 **[Multi-Agent Delegation Framework](./level-5/multi-agent-framework)</li></ul> | Pulling everything together into small “systems”: simulating concurrent or pipelined requests, interpreting tool-call style outputs, running multi-step flows, tracking what a tiny “research agent” has seen, prototyping a toy vector search, and exploring simple multi-agent handoff patterns. |
 ---
 
 ## 🧭 Bigger Roadmap (Beyond This Repo)
