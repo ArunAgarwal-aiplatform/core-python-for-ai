@@ -1,35 +1,109 @@
-# Python Foundations for Backend & AI Engineering ⚙️🤖
+# Python Foundations for AI & Backend Projects ⚙️🤖
 
-When I started my journey into backend and AI engineering, I quickly realized the role goes way beyond just writing basic Python scripts. Whether you are building scalable web servers, data ingestion pipelines, or deploying Large Language Models (LLMs), it’s really about building heavy-duty infrastructure that runs securely, affordably, and reliably in the real world. 
+I’m moving from frontend and web work into Python, backend, and eventually AI/LLM projects. This repo is my way of learning out loud. Instead of just calling an LLM API a few times and saying “I know AI,” I want to understand how these models actually fit into real products—how they connect to APIs, databases, web data, and user flows.[web:26][web:31]
 
-As someone breaking into this space, I know that to eventually handle high-traffic APIs and production AI models, I need a rock-solid grip on the backend fundamentals—things like memory management, strict type safety, concurrency, and web-scale data ingestion. 
+To get there, I’m using Python to build small, focused projects that look like real, everyday engineering tasks: estimating costs, cleaning and chunking text, validating inputs, handling failures, and wiring components into simple pipelines. I’m also using a bit of my past SEO experience to build medium-level web data projects that could later be useful for RAG-style and search-style systems.
 
-So, rather than getting stuck in "tutorial hell," I’m documenting my learning process here. I'm teaching myself these core concepts by actually building things from scratch, focusing on infrastructure-adjacent CLI tools, high-throughput web scrapers for RAG pipelines, and system architecture mockups.
+Right now I don’t know everything about AI systems or backend infrastructure. I’m learning it step by step. The idea is simple: pick one core idea at a time (like working with JSON, handling errors, or processing text), and build a tiny project around it that I can actually run, break, and improve.
 
-## 🏗️ Project Architecture (Phase 1: Core Python)
+Over time, I want these skills to stack into something bigger: REST APIs, data pipelines, LLM integrations, RAG, and agent-style workflows. This repository is **Phase 1** of that journey—using core Python to become confident enough to build real things later.
 
-This is Phase 1 of my ai engineering journey. Each module tackles a specific Python fundamental required for both traditional backend systems and modern AI operations, proven through exactly 5 high-impact projects. 
+---
 
-*(Note: 📈 projects leverage my previous SEO background for web-scale RAG data ingestion, while 🔥 projects explore cutting-edge AI infrastructure concepts.)*
+## 🏗️ Project Architecture (Phase 1)
 
-| # | Progression Level | Applied Infrastructure Projects | Backend & AI Relevance |
-|---|---|---|---|
-| **01** | **Level 1: Core Scripting & I/O**<br>*(Functions, Math, Basic Logic)* | <ul><li>[Cloud API Cost Estimator](./level-1/cloud-cost-estimator)</li><li>[LLM Token Budget Calculator](./level-1/token-calculator)</li><li>[Environment Config Validator](./level-1/env-config-validator)</li><li>[Text Cleaning Utility](./level-1/text-cleaner)</li><li>📈 **[RAG Crawler Budget Tracker](./level-1/crawl-budget-tracker)**</li><li>🔥 **[Quantization Precision Analyzer](./level-1/quantization-analyzer)**</li></ul> | Writing clean, functional scripts to manage float precision for API billing, securely load `.env` variables, track byte-size limits for web scrapers, and calculate hardware VRAM footprints for local models. |
-| **02** | **Level 2: Data Parsing & Logic Guards**<br>*(Dicts, JSON, Routing, Error Handling)* | <ul><li>[API Rate Limit Handler](./level-2/rate-limit-handler)</li><li>[API Response Extractor](./level-2/response-extractor)</li><li>[Webhook Payload Builder](./level-2/webhook-builder)</li><li>[Model Fallback Router](./level-2/fallback-router)</li><li>📈 **[JSON-LD Metadata Extractor](./level-2/schema-injector)**</li><li>🔥 **[Semantic Prompt Injection Firewall](./level-2/injection-firewall)**</li></ul> | Gracefully handling HTTP 429 timeouts, routing logic between fast vs. smart models, parsing deeply nested JSON schemas for database metadata, and deflecting adversarial AI "jailbreak" attempts. |
-| **03** | **Level 3: Batch Operations & Resilience**<br>*(Loops, Retry Logic, Bulk Processing)* | <ul><li>[Dataset Batch Generator](./level-3/dataset-batcher)</li><li>[Exponential Backoff Retrier](./level-3/backoff-retrier)</li><li>[Pydantic API Request Validator](./level-3/request-validator)</li><li>📈 **[High-Throughput Sitemap Ingestor](./level-3/sitemap-extractor)**</li><li>📈 **[Spider-Trap Escape Guardrail](./level-3/spider-trap-guardrail)**</li><li>🔥 **[Context-Aware RAG Chunker](./level-3/rag-chunker)**</li></ul> | Managing network retry logic, enforcing strict data schemas, looping through massive XML sitemaps to feed millions of URLs into data pipelines, and writing algorithms with overlapping sliding windows to chunk text for Vector DBs. |
-| **04** | **Level 4: State Management & Optimization**<br>*(Advanced Structs, Caching, Aggregation)* | <ul><li>[Map-Reduce Log Aggregator](./level-4/map-reduce-aggregator)</li><li>[DB Connection Pooler](./level-4/connection-pooler)</li><li>[Sliding-Window Memory Manager](./level-4/sliding-window-memory)</li><li>[Streaming JSON Chunk Assembler](./level-4/streaming-assembler)</li><li>📈 **[RAG Source Quality Scorer](./level-4/source-quality-scorer)**</li><li>🔥 **[LLM Caching Decorator Library](./level-4/caching-decorators)**</li></ul> | Reconstructing broken streaming payloads from external APIs, abstracting database connection pools, maintaining conversational context limits, and engineering custom decorators (`@cache_api`) to intercept and save identical LLM queries. |
-| **05** | **Level 5: Architecture & Orchestration**<br>*(OOP, Async Concepts, Multi-Agent Systems)* | <ul><li>[Async Request Pipeliner Mockup](./level-5/request-pipeliner)</li><li>[Agentic Tool Call Parser](./level-5/tool-call-parser)</li><li>[Pipeline Task Runner](./level-5/task-runner)</li><li>📈 **[Stateful Web-Research Agent](./level-5/stateful-scraper)**</li><li>🔥 **[In-Memory Baby Vector DB](./level-5/baby-vector-db)**</li><li>🔥 **[Multi-Agent Delegation Framework](./level-5/multi-agent-framework)**</li></ul> | Building Object-Oriented web scrapers that track their own state, parsing complex tool calls for agentic workflows, engineering a lightweight Vector Indexer using cosine similarity, and orchestrating autonomous LLM agents. |
+I’ve organized the projects by **level**, from basic scripts up to small orchestration-style experiments.  
+Each level has 5 projects: a mix of general backend-style practice plus one project that uses web/page data (where my past experience helps).
 
-## 🚀 Future Phases Roadmap
-- **Phase 2:** FastAPI, REST APIs & WebSocket Integration
-- **Phase 3:** High-Performance Data Engineering (Pandas, Polars, SQL)
-- **Phase 4:** Docker, Kubernetes & Cloud Deployment (AWS/GCP)
-- **Phase 5:** CI/CD Pipelines & MLOps Infrastructure
+The names are intentionally simple and descriptive so anyone scanning the repo can quickly understand what each thing does.
 
-## 🛠️ Current Tech Stack
-- Frontend & SEO (Previous Experience)
-- Python 3.x
-- Git & Version Control 
+---
 
-## 💡 How to Run
-Each project is self-contained. Navigate to the specific project directory and read its local `README.md` for execution instructions and backend system architecture notes.
+### Level 1 – Core Scripting & I/O  
+_Focus: functions, numbers, basic logic, clean console output_
+
+| Project | Description |
+|--------|-------------|
+| [Cloud Cost Calculator](./level-1/cloud-cost-calculator) | Takes basic pricing and token usage numbers and prints a clear cost breakdown for a hypothetical API run. |
+| [Token Budget Planner](./level-1/token-budget-planner) | Starts from a fixed budget and works backwards to how many tokens/operations can fit inside it. |
+| [Config Sanity Checker](./level-1/config-sanity-checker) | Loads a few mock “settings” and checks for missing values or obviously wrong types. |
+| [Text Hygiene Helper](./level-1/text-hygiene-helper) | Cleans messy text (extra spaces, line breaks, odd characters) to make it friendlier for later processing. |
+| 📄 [Web Crawl Size Estimator](./level-1/web-crawl-size-estimator) | Uses a rough page-size estimate and page count to guess how large a simple web crawl might be in MB/GB. |
+
+---
+
+### Level 2 – Data Parsing & Safety Checks  
+_Focus: dictionaries, JSON, basic routing, simple guard logic_
+
+| Project | Description |
+|--------|-------------|
+| [Rate Limit Simulator](./level-2/rate-limit-simulator) | Pretends to call a service repeatedly and shows when and how a script should slow down. |
+| [Response Field Picker](./level-2/response-field-picker) | Works with a mock JSON “API response” and extracts only the fields that matter. |
+| [Webhook Payload Maker](./level-2/webhook-payload-maker) | Builds small JSON payloads that a backend or third-party service could reasonably consume. |
+| [Simple Choice Switchboard](./level-2/simple-choice-switchboard) | Given a few conditions, chooses between “fast”, “safe”, or “detailed” processing modes. |
+| 📄 [Page Info Reader](./level-2/page-info-reader) | Reads a tiny JSON blob representing a page (title, url, tags) and prints a human-friendly summary. |
+
+---
+
+### Level 3 – Batch Work & Resilience  
+_Focus: loops, retries, working over lists of items_
+
+| Project | Description |
+|--------|-------------|
+| [Batch Splitter](./level-3/batch-splitter) | Takes a long list of items and splits it into smaller batches that could later be processed in chunks. |
+| [Stubborn Request Tamer](./level-3/stubborn-request-tamer) | Simulates failing operations and retries them with increasing delays. |
+| [Shape Inspector](./level-3/shape-inspector) | Checks whether each “request” in a list has the keys and basic types it’s supposed to have. |
+| [Story Chunker](./level-3/story-chunker) | Splits long text into overlapping segments so no important sentence gets completely cut off. |
+| 📄 [Sitemap Link Collector](./level-3/sitemap-link-collector) | Walks through a simple sitemap-like structure and collects URLs into a clean list for later use. |
+
+---
+
+### Level 4 – State, Quality & Caching  
+_Focus: remembering a bit of state, scoring, and reuse_
+
+| Project | Description |
+|--------|-------------|
+| [Log Storyboard](./level-4/log-storyboard) | Reads a bunch of fake “log lines” and builds simple summaries like counts per type or per level. |
+| [Connection Toy Pool](./level-4/connection-toy-pool) | Pretends to manage a tiny pool of reusable “connections” instead of creating a new one every time. |
+| [Conversation Trimmer](./level-4/conversation-trimmer) | Keeps only the latest messages in a pretend chat history so it doesn’t grow forever. |
+| [Drip-Feed Reassembler](./level-4/drip-feed-reassembler) | Simulates receiving text in small chunks and stitches it back into a single complete message. |
+| 📄 [Content Signal Scorer](./level-4/content-signal-scorer) | Gives simple scores to short pieces of text (e.g., too short, too cluttered, or good enough) to decide what’s worth keeping. |
+
+---
+
+### Level 5 – Orchestration & Small “Agent-Like” Flows  
+_Focus: basic OOP, simple orchestration, multi-step flows_
+
+| Project | Description |
+|--------|-------------|
+| [Multi-Request Conductor](./level-5/multi-request-conductor) | Takes several fake “jobs” and walks them through a simple pipeline, keeping track of their status. |
+| [Tool Output Interpreter](./level-5/tool-output-interpreter) | Accepts a structured “tool result” and decides what the next step in the flow should be. |
+| [Mini Workflow Engine](./level-5/mini-workflow-engine) | Runs a chain of small tasks in order, passing results from one step into the next. |
+| [Toy Memory Search](./level-5/toy-memory-search) | Stores short snippets and checks which ones are most similar to a simple search query. |
+| 📄 [Curious Web Scout](./level-5/curious-web-scout) | Keeps track of a tiny “browsing session”: which pages were visited, which are pending, and avoids revisiting the same link. |
+
+---
+
+## 🧭 Bigger Roadmap (Beyond This Repo)
+
+Phase 1 is about **core Python** and getting comfortable with scripts, data, and small flows.  
+After that, my plan is roughly:
+
+1. **Core Python** (this repo)  
+2. **FastAPI & REST APIs** – turn some of these scripts into simple HTTP endpoints  
+3. **Data & Storage** – use Pandas and basic SQL to store, query, and analyze the data these tools produce  
+4. **LLM & AI APIs** – start calling real LLM APIs, reusing the patterns I practiced here (costs, cleaning, batching, retries)  
+5. **RAG & Agent Flows** – add retrieval over my own data and experiment with small agent-like workflows  
+6. **Portfolio & Jobs** – polish the best projects into clean, documented examples I can show to hiring managers and senior engineers[web:22][web:28]
+
+---
+
+## 🛠️ Current Stack
+
+- Frontend & web background  
+- Python 3.x  
+- Git & VS Code  
+
+## 💡 About This Repo
+
+This is a learning-focused space. I expect the code and structure to improve as I learn more. If you’re reviewing this and see something I could do better, I’m very open to suggestions.
