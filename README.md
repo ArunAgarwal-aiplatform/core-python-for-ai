@@ -20,67 +20,67 @@ The names are intentionally simple and descriptive so anyone scanning the repo c
 ---
 
 ### Level 1 – Core Scripting & I/O  
-_Focus: functions, numbers, basic logic, clean console output_
+_Focus: functions, math, basic logic, clean console output_
 
 | Project | Description |
 |--------|-------------|
-| [Cloud Cost Calculator](./level-1/cloud-cost-calculator) | Takes basic pricing and token usage numbers and prints a clear cost breakdown for a hypothetical API run. |
-| [Token Budget Planner](./level-1/token-budget-planner) | Starts from a fixed budget and works backwards to how many tokens/operations can fit inside it. |
-| [Config Sanity Checker](./level-1/config-sanity-checker) | Loads a few mock “settings” and checks for missing values or obviously wrong types. |
-| [Text Hygiene Helper](./level-1/text-hygiene-helper) | Cleans messy text (extra spaces, line breaks, odd characters) to make it friendlier for later processing. |
-| 📄 [Web Crawl Size Estimator](./level-1/web-crawl-size-estimator) | Uses a rough page-size estimate and page count to guess how large a simple web crawl might be in MB/GB. |
+| [Cloud API Cost Estimator](./level-1/cloud-cost-estimator) | Estimates the total cost of an LLM/API run using token prices and usage, and prints a clear cost breakdown. |
+| [Environment Config Validator](./level-1/env-config-validator) | Loads a few mock config values (keys, timeouts, flags) and checks for missing, empty, or wrong-type settings. |
+| [LLM Token Budget Calculator](./level-1/token-calculator) | Starts from a fixed budget and calculates how many tokens or requests fit within that cost limit. |
+| [Text Cleaning Utility](./level-1/text-cleaner) | Normalizes raw text by trimming whitespace, removing junk characters, and preparing it for later embedding or storage. |
+| 📈 [RAG Crawler Budget Tracker](./level-1/crawl-budget-tracker) | Uses rough page-size and URL counts to estimate how large a basic document crawl will be in MB/GB for a future RAG system. |
 
 ---
 
 ### Level 2 – Data Parsing & Safety Checks  
-_Focus: dictionaries, JSON, basic routing, simple guard logic_
+_Focus: dictionaries, JSON, routing, simple guard logic_
 
 | Project | Description |
 |--------|-------------|
-| [Rate Limit Simulator](./level-2/rate-limit-simulator) | Pretends to call a service repeatedly and shows when and how a script should slow down. |
-| [Response Field Picker](./level-2/response-field-picker) | Works with a mock JSON “API response” and extracts only the fields that matter. |
-| [Webhook Payload Maker](./level-2/webhook-payload-maker) | Builds small JSON payloads that a backend or third-party service could reasonably consume. |
-| [Simple Choice Switchboard](./level-2/simple-choice-switchboard) | Given a few conditions, chooses between “fast”, “safe”, or “detailed” processing modes. |
-| 📄 [Page Info Reader](./level-2/page-info-reader) | Reads a tiny JSON blob representing a page (title, url, tags) and prints a human-friendly summary. |
+| [API Rate Limit Handler](./level-2/rate-limit-handler) | Simulates hitting a rate limit and shows how a script can pause, back off, or slow itself down. |
+| [API Response Extractor](./level-2/response-extractor) | Works with a mock JSON response and pulls out only the useful fields (text, ids, usage) into a clean structure. |
+| [Model Fallback Router](./level-2/fallback-router) | Given a simple condition (like error or complexity), chooses between a “fast” or “smart” model as the next step. |
+| 📈 [JSON-LD Metadata Extractor](./level-2/schema-injector) | Reads small JSON-LD or page-metadata snippets and extracts titles, URLs, and entity information for later indexing. |
+| 🔥 [Semantic Prompt Injection Firewall](./level-2/injection-firewall) | Scans prompts for risky patterns (like “ignore previous instructions”) and flags or blocks them before they’re sent on. |
 
 ---
 
 ### Level 3 – Batch Work & Resilience  
-_Focus: loops, retries, working over lists of items_
+_Focus: loops, retry logic, bulk processing_
 
 | Project | Description |
 |--------|-------------|
-| [Batch Splitter](./level-3/batch-splitter) | Takes a long list of items and splits it into smaller batches that could later be processed in chunks. |
-| [Stubborn Request Tamer](./level-3/stubborn-request-tamer) | Simulates failing operations and retries them with increasing delays. |
-| [Shape Inspector](./level-3/shape-inspector) | Checks whether each “request” in a list has the keys and basic types it’s supposed to have. |
-| [Story Chunker](./level-3/story-chunker) | Splits long text into overlapping segments so no important sentence gets completely cut off. |
-| 📄 [Sitemap Link Collector](./level-3/sitemap-link-collector) | Walks through a simple sitemap-like structure and collects URLs into a clean list for later use. |
+| [Dataset Batch Generator](./level-3/dataset-batcher) | Takes a long list of items and splits them into batches ready for bulk processing or batched API calls. |
+| [Exponential Backoff Retrier](./level-3/backoff-retrier) | Simulates failing operations and retries them with growing delays to avoid hammering a flaky service. |
+| [Pydantic API Request Validator](./level-3/request-validator) | Uses Pydantic models to validate that fake requests have the right fields and types before they “hit” an API. |
+| 📈 [High-Throughput Sitemap Ingestor](./level-3/sitemap-extractor) | Walks through a simple sitemap-like structure and collects URLs into batches for later crawling or indexing. |
+| 🔥 [Context-Aware RAG Chunker](./level-3/rag-chunker) | Splits long documents into overlapping text chunks so they’re easier to search and feed into retrieval systems. |
 
 ---
 
 ### Level 4 – State, Quality & Caching  
-_Focus: remembering a bit of state, scoring, and reuse_
+_Focus: light state management, scoring, reuse and optimization_
 
 | Project | Description |
 |--------|-------------|
-| [Log Storyboard](./level-4/log-storyboard) | Reads a bunch of fake “log lines” and builds simple summaries like counts per type or per level. |
-| [Connection Toy Pool](./level-4/connection-toy-pool) | Pretends to manage a tiny pool of reusable “connections” instead of creating a new one every time. |
-| [Conversation Trimmer](./level-4/conversation-trimmer) | Keeps only the latest messages in a pretend chat history so it doesn’t grow forever. |
-| [Drip-Feed Reassembler](./level-4/drip-feed-reassembler) | Simulates receiving text in small chunks and stitches it back into a single complete message. |
-| 📄 [Content Signal Scorer](./level-4/content-signal-scorer) | Gives simple scores to short pieces of text (e.g., too short, too cluttered, or good enough) to decide what’s worth keeping. |
+| [DB Connection Pooler](./level-4/connection-pooler) | Pretends to manage a small pool of reusable “connections” instead of creating a new one for every request. |
+| [Sliding-Window Memory Manager](./level-4/sliding-window-memory) | Keeps only the most recent messages in a fake chat history to mimic a limited context window. |
+| [Streaming JSON Chunk Assembler](./level-4/streaming-assembler) | Simulates receiving partial JSON/text chunks and rebuilds them into one complete response. |
+| 📈 [RAG Source Quality Scorer](./level-4/source-quality-scorer) | Assigns simple scores to documents based on length, noise, or structure to decide which ones are worth indexing. |
+| 🔥 [LLM Caching Decorator Library](./level-4/caching-decorators) | Uses decorators to cache repeated “prompt → response” calls so identical queries can be served from memory instead of re-calling a model. |
 
 ---
 
 ### Level 5 – Orchestration & Small “Agent-Like” Flows  
-_Focus: basic OOP, simple orchestration, multi-step flows_
+_Focus: basic OOP, simple orchestration, multi-step and agent-style patterns_
 
 | Project | Description |
 |--------|-------------|
-| [Multi-Request Conductor](./level-5/multi-request-conductor) | Takes several fake “jobs” and walks them through a simple pipeline, keeping track of their status. |
-| [Tool Output Interpreter](./level-5/tool-output-interpreter) | Accepts a structured “tool result” and decides what the next step in the flow should be. |
-| [Mini Workflow Engine](./level-5/mini-workflow-engine) | Runs a chain of small tasks in order, passing results from one step into the next. |
-| [Toy Memory Search](./level-5/toy-memory-search) | Stores short snippets and checks which ones are most similar to a simple search query. |
-| 📄 [Curious Web Scout](./level-5/curious-web-scout) | Keeps track of a tiny “browsing session”: which pages were visited, which are pending, and avoids revisiting the same link. |
+| [Async Request Pipeliner Mockup](./level-5/request-pipeliner) | Simulates sending multiple fake requests and handling them in a simple, pipelined or concurrent style. |
+| [Agentic Tool Call Parser](./level-5/tool-call-parser) | Accepts a structured “tool call” output (like a JSON instruction) and routes it to the right local function. |
+| 📈 [Stateful Web-Research Agent](./level-5/stateful-scraper) | Tracks which pages have been “visited” in a small browsing session and records simple notes per page. |
+| 🔥 [In-Memory Baby Vector DB](./level-5/baby-vector-db) | Stores text alongside small mock “vectors” and performs a toy similarity search over them. |
+| 🔥 [Multi-Agent Delegation Framework](./level-5/multi-agent-framework) | Models a tiny system where two or more “agents” pass tasks and messages between each other to complete a goal. |
 
 ---
 
