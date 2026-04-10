@@ -4,7 +4,7 @@ I’m moving from frontend and web/SEO work into Python, backend, and eventually
 
 To get there, I’m using Python to build small, focused projects that look like real, everyday engineering tasks: estimating costs, cleaning and chunking text, validating inputs, handling failures, and wiring components into simple pipelines. I’m also using a bit of my past web/SEO experience to build medium-level web data projects that could later be useful for RAG-style and search-style systems.
 
-Right now I don’t know everything about AI systems or infrastructure. I’m learning it step by step. The idea is simple: pick one core idea at a time (like working with JSON, handling errors, or processing text), and build a tiny project around it that I can actually run, break, and improve.
+Right now I don’t know everything about AI systems or infrastructure. I’m learning it step by step. The idea is simple: pick one core idea at a time (like working with JSON, handling errors, or processing text), and build a tiny project around it that I can actually run, break, and improve and become better every single day .
 
 Over time, I want these skills to stack into something bigger: REST APIs, data pipelines, LLM integrations, RAG, and agent-style workflows. This repository is **Phase 1** of that journey—using core Python to get ready for more serious backend and LLM work in the future.
 
