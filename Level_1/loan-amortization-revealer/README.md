@@ -11,6 +11,15 @@ On a ₹50L home loan at **8.5%** for **20 years**:
 
 This script makes that hidden math **visible**.
 
+## Required Data:
+
+- **Loan Amount** (e.g., 5000000)
+- **Annual Interest Rate** (e.g., 8.5)
+- **Tenure in Months** (e.g., 240 for 20 years)
+## Optional Data:
+
+**Prepay Months: Specific months to check early closure costs (e.g., 12 36 60)**
+
 ## What it Outputs
 
 - ✅ **Exact EMI** (standard formula)  
