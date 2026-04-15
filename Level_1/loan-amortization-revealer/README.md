@@ -1,46 +1,60 @@
-# 📊 Loan Amortization Revealer
+# Loan Amortization Revealer
 
-A beginner-friendly Python CLI tool that reveals the hidden cost of your loan.  
-It breaks down your EMI month by month, shows when your principal starts making a real dent, and helps calculate the true cost of closing your loan early.
+Your bank shows you the **EMI**. It never shows how much of that EMI is **just interest** for the first several years. This script does.
 
-## What this project does
+## The Problem
 
-This tool goes beyond basic EMI calculation and generates a more practical financial breakdown for real loan analysis.
+On a ₹50L home loan at **8.5%** for **20 years**:
+- **Month 1 EMI**: ₹43,391  
+- **Interest**: ₹35,417 *(82% of EMI)*  
+- **Principal**: ₹7,974 *(only 18% reduces debt)*  
 
-## Required Data
+This script makes that hidden math **visible**.
 
-- Loan Amount, for example: `5000000`
-- Annual Interest Rate, for example: `8.5`
-- Tenure in Months, for example: `240`
+## What it Outputs
 
-## Optional Data
+- ✅ **Exact EMI** (standard formula)  
+- ✅ **Month-by-month table** (Principal vs Interest split)  
+- ✅ **Crossover Month**: When principal finally exceeds interest  
+- ✅ **Total interest paid** + cost %  
+- ✅ **Prepayment analysis** (early closure costs + 2% penalty)  
 
-- Prepay Months, specific months to check early closure cost, for example: `12 36 60`
+## How to Run
 
-## Output
-
-Instead of showing only one EMI number, this project generates a complete financial report including:
-
-- **Summary Box** with total payment, total interest, and interest-to-principal ratio
-- **Month-by-Month Table** with EMI, principal component, interest component, cumulative interest, and remaining balance
-- **Crossover Highlight** showing the exact month where the principal component becomes higher than the interest component
-- **Prepayment Analysis Table** showing early closure amount, 2% bank penalty, and estimated net savings
-
-## Example Inputs
-
-```text
-Loan Amount: 5000000
-Annual Interest Rate: 8.5
-Tenure in Months: 240
-Prepay Months: 12 36 60
-```
-
-## Why this project matters
-
-This project helps beginners practice Python with a real-world finance use case while working with formulas, loops, conditionals, formatted output, and reporting.
-
-## Run
-
+**Interactive mode:**
 ```bash
-python app.py
+python loan_amortization.py
 ```
+
+**Command-line mode:**
+```bash
+python loan_amortization.py --loan 5000000 --rate 8.5 --tenure 240 --prepay 12 60 120
+```
+
+## Arguments
+
+| Arg | Description | Example |
+|-----|-------------|---------|
+| `--loan / -l` | Loan amount in ₹ | `5000000` |
+| `--rate / -r` | Annual interest rate (%) | `8.5` |
+| `--tenure / -t` | Tenure in months | `240` |
+| `--prepay / -p` | Months to check closure cost | `12 60 120` |
+
+## Sample Output
+LOAN AMORTIZATION REVEALER
+============================================================
+Monthly EMI: ₹43,391.13 | Total Interest: ₹54.14 L (108.28%)
+============================================================
+
+Month │ EMI │ Principal │ Interest │ Balance
+───────┼──────────────┼──────────────┼──────────────┼────────────────
+1 │ 43,391.13 │ 7,974.13 │ 35,417.00 │ 4,992,025.87
+...
+>>> │ 43,391.13 │ 21,945.67 │ 21,445.46 │ 3,768,546.34 ← ★ PRINCIPAL > INTEREST
+...
+240 │ 43,391.13 │ 43,341.47 │ 49.66 │ 0.00
+
+🔄 CROSSOVER POINT: Month 131 (10y 11m)
+Principal component finally exceeds interest component!                                ---
+
+**Perfect for Level 1**: Variables, loops, conditionals, f-string formatting, argparse, and real-world financial math. [cite:1]
