@@ -12,19 +12,20 @@ Over time, I want these skills to stack into something bigger: REST APIs, data p
 
 ---
 
-| # | Project | Why AI/LLM Relevant |
-|---|---------|--------------------|
-| **01** | 🌟 [Meeting Cost Ticker](link) | Math → cost estimation for LLM APIs |
-| **02** | [Loan Amortization Revealer](link) | File I/O, structured output |
-| **03** | [Password Entropy Calculator](link) | Input validation for LLM prompts |
-| **04** | [Keyword Cannibalization Detector](link) | SEO → RAG search optimization |
-| **05** | [JSON API Schema Differ](link) | LLM API response validation |
-| **06** | [Search Intent Classifier](link) | Query routing for RAG/agents |
-| **07** | [Internal Link Scanner](link) | Web data → retrieval pipelines |
-| **08** | [Spaced Repetition Engine](link) | Batch processing, LLM training |
-| **09** | [SEO Rank Tracker](link) | Data persistence, analytics |
-| **10** | 🌟 [Personal Finance Engine](link) | Classes, state → production apps | 
+## 🚀 Featured Projects (10 Total)
 
+| # | Project | Description |
+|---|---------|-------------|
+| **01** | 🌟 [Meeting Cost Ticker](link) | Tracks meeting cost live to show how time turns into money |
+| **02** | [Loan Amortization Revealer](link) | Breaks each loan payment into principal, interest, and balance |
+| **03** | [Password Entropy Calculator](link) | Measures password strength to encourage safer password choices |
+| **04** | [Keyword Cannibalization Detector](link) | Finds pages competing for the same keyword and hurting visibility |
+| **05** | [JSON API Schema Differ](link) | Compares JSON structures to catch schema changes before they break things |
+| **06** | [Search Intent Classifier](link) | Sorts queries by intent to better understand what users want |
+| **07** | [Internal Link Scanner](link) | Finds internal linking gaps to improve site structure and discovery |
+| **08** | [Spaced Repetition Engine](link) | Schedules review sessions to improve memory through timed repetition |
+| **09** | [SEO Rank Tracker](link) | Tracks keyword ranking changes over time to spot movement early |
+| **10** | 🌟 [Personal Finance Engine](link) | Tracks income, spending, and balance to support better money decisions |
 ---
 ## 🧭 Bigger Roadmap (Beyond This Repo)
 
