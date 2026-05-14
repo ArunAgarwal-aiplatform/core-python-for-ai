@@ -17,7 +17,7 @@ Over time, I want these skills to stack into something bigger: REST APIs, data p
 | # | Project | Description |
 |---|---------|-------------|
 | **01** | 🌟 [Meeting Cost Ticker](link) | Tracks meeting cost live to show how time turns into money |
-| **02** | [Loan Amortization Revealer](link) | Breaks each loan payment into principal, interest, and balance |
+| **02** | [Loan Amortization Revealer](/Level_1/loan-amortization-revealer/) | Breaks each loan payment into principal, interest, and balance |
 | **03** | [Password Entropy Calculator](link) | Measures password strength to encourage safer password choices |
 | **04** | [Keyword Cannibalization Detector](link) | Finds pages competing for the same keyword and hurting visibility |
 | **05** | [JSON API Schema Differ](link) | Compares JSON structures to catch schema changes before they break things |
