@@ -6,4 +6,5 @@ loops, functions, and simple problem-solving.
 
 ## Projects
 - [Loan Amortization Revealer](./loan-amortization-revealer)
-- - [Password Entropy Calculator](./loan-amortization-revealer)
+- [Password Entropy calculator](./password-entropy-calculator)
+
