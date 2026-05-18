@@ -18,14 +18,14 @@ Over time, I want these skills to stack into something bigger: REST APIs, data p
 |---|---------|-------------|
 | **01** | [Loan Amortization Revealer](/Level_1/loan-amortization-revealer/) | Breaks each loan payment into principal, interest, and balance |
 | **02** | [Password Entropy Calculator](Level_1/password-entropy-calculator) | Measures password strength to encourage safer password choices |
-| **03** | 🌟 [SEO Content Health Auditor](link) | (Upcoming) A quick SEO quality checker that grades your writing. |
-| **04** | [Keyword Cannibalization Detector](link) | (Upcoming) Finds pages competing for the same keyword and hurting visibility |
-| **05** | [JSON API Schema Differ](link) | (Upcoming) Compares JSON structures to catch schema changes before they break things |
-| **06** | [Search Intent Classifier](link) | (Upcoming) Sorts queries by intent to better understand what users want |
-| **07** | [Internal Link Scanner](link) | (Upcoming) Finds internal linking gaps to improve site structure and discovery |
-| **08** | [Spaced Repetition Engine](link) | (Upcoming) Schedules review sessions to improve memory through timed repetition |
-| **09** | [SEO Rank Tracker](link) | (Upcoming) Tracks keyword ranking changes over time to spot movement early |
-| **10** | 🌟 [Personal Finance Engine](link) | (Upcoming) Tracks income, spending, and balance to support better money decisions |
+| **03** | 🌟 [SEO Content Health Auditor](link) | **(Upcoming)** A quick SEO quality checker that grades your writing. |
+| **04** | [Keyword Cannibalization Detector](link) | **(Upcoming)** Finds pages competing for the same keyword and hurting visibility |
+| **05** | [JSON API Schema Differ](link) | **(Upcoming)** Compares JSON structures to catch schema changes before they break things |
+| **06** | [Search Intent Classifier](link) | **(Upcoming)** Sorts queries by intent to better understand what users want |
+| **07** | [Internal Link Scanner](link) | **(Upcoming)** Finds internal linking gaps to improve site structure and discovery |
+| **08** | [Spaced Repetition Engine](link) | **(Upcoming)** Schedules review sessions to improve memory through timed repetition |
+| **09** | [SEO Rank Tracker](link) | **(Upcoming)** Tracks keyword ranking changes over time to spot movement early |
+| **10** | 🌟 [Personal Finance Engine](link) | **(Upcoming)** Tracks income, spending, and balance to support better money decisions |
 ---
 ## 🧭 Bigger Roadmap (Beyond This Repo)
 
