@@ -12,7 +12,7 @@ Over time, I want these skills to stack into something bigger: REST APIs, data p
 
 ---
 
-## 🚀 Featured Projects (10 Total)
+## 🚀 Featured Projects (3 Total **(Upcoming**)
 
 | # | ***Project*** | ***Description*** |
 |---|---------|-------------|
