@@ -5,11 +5,6 @@ import sys
 # ----------------------------------------------------------
 
 def get_interactive_input():
-    """
-    This function asks the user questions one by one.
-    We use 'while True' loops so if they make a typo, 
-    we ask them again instead of crashing the program.
-    """
     
     print("\n" + "=" * 60)
     print("        LOAN AMORTIZATION REVEALER")
