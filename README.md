@@ -14,7 +14,7 @@ Over time, I want these skills to stack into something bigger: REST APIs, data p
 
 ## 🚀 Featured Projects (10 Total)
 
-| # | Project | Description |
+| # | ***Project*** | ***Description*** |
 |---|---------|-------------|
 | **01** | [Loan Amortization Revealer](/Level_1/loan-amortization-revealer/) | Breaks each loan payment into principal, interest, and balance |
 | **02** | [Password Entropy Calculator](Level_1/password-entropy-calculator) | Measures password strength to encourage safer password choices |
