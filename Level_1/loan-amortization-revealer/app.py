@@ -5,7 +5,7 @@ import sys
 def get_interactive_input():
     
     print("\n" + "=" * 60)
-    print("        LOAN AMORTIZATION REVEALER")
+    print("      LOAN AMORTIZATION REVEALER")
     print("=" * 60)
     print("\n  Please enter your loan details below:\n")
 
