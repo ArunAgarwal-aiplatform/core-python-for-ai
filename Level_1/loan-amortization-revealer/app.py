@@ -2,8 +2,6 @@ import argparse
 import sys
 
 
-# ----------------------------------------------------------
-
 def get_interactive_input():
     
     print("\n" + "=" * 60)
