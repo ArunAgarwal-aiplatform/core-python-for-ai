@@ -18,7 +18,7 @@ Over time, I want these skills to stack into something bigger: REST APIs, data p
 |---|---------|-------------|
 | **01** | [Loan Amortization Revealer](/Level_1/loan-amortization-revealer/) | Breaks each loan payment into principal, interest, and balance |
 | **02** | [Password Entropy Calculator](Level_1/password-entropy-calculator) | Measures password strength to encourage safer password choices |
-| **03** | 🌟 [SEO Audit Health Checker]([/seo-audit-health-checker](https://github.com/ArunAgarwal-aiplatform/seo-audit-health-checker)) | A quick SEO quality checker that grades your writing. |
+| **03** | 🌟 [SEO Audit Health Checker](https://github.com/ArunAgarwal-aiplatform/seo-audit-health-checker) | A quick SEO quality checker that grades your writing. |
 
 ---
 ## 🧭 Bigger Roadmap (Beyond This Repo)
