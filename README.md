@@ -1,4 +1,3 @@
-````markdown
 # Core Python Foundations for Backend & AI ⚙️🤖
 
 ![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)
